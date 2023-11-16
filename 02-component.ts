@@ -4,7 +4,7 @@ interface DumbComponentProps {
 }
 
 const getSideEffects = (): number => {
-  return 3;
+  return Math.random();
 };
 
 const DumbComponent = (props: DumbComponentProps) => {
