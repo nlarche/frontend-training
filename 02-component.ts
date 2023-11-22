@@ -8,7 +8,7 @@ const getSideEffects = (): number => {
 };
 
 const DumbComponent = (props: DumbComponentProps) => {
-  console.log(props.a + props.b);
+  return props.a + props.b;
 };
 
 const ContainerComponent = () => {
@@ -20,3 +20,5 @@ const ContainerComponent = () => {
 
   return [composantA, composantB];
 };
+
+ContainerComponent().forEach(console.log);

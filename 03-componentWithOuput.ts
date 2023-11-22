@@ -15,7 +15,7 @@ const getSideEffects = (): number => {
 const DumbComponent = (props: DumbComponentWithOuputProps) => {
   const addition = props.a + props.b;
   props.outputHandler({ value: addition });
-  console.log("DumbComponent", addition);
+  return addition;
 };
 
 const ContainerComponent = () => {
@@ -34,3 +34,5 @@ const ContainerComponent = () => {
 
   return [composantA, composantB];
 };
+
+ContainerComponent().forEach(console.log);
